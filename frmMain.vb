@@ -4,12 +4,11 @@
     Private decMon1, decMon2, decTue1, decTue2, decWed1, decWed2, decThu1, decThu2, decFri1, decFri2, decSat1, decSat2, decSun1, decSun2, decRate, decRegTotal, decRegAmount, decOverTotal, decOverAmount, decNetPay As Decimal
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        GetInputs()
         FormatInputsOutputs()
     End Sub
 
     Private Sub cmdProcessIt_Click(sender As Object, e As EventArgs) Handles cmdProcessIt.Click
-        'declarations
+        'procedure-level declarations
         Dim decRegOverTotal, decRestTotal As Decimal
         'get data from form
         GetInputs()
@@ -58,7 +57,7 @@
 
     Private Sub textbox_LostFocus(sender As Object, e As EventArgs) Handles txtWednesday2.Leave, txtWednesday1.Leave, txtTuesday2.Leave, txtTuesday1.Leave, txtThursday2.Leave, txtThursday1.Leave, txtSunday2.Leave, txtSunday1.Leave, txtSaturday2.Leave, txtSaturday1.Leave, txtMonday2.Leave, txtMonday1.Leave, txtHourlySalary.Leave, txtFriday2.Leave, txtFriday1.Leave
         GetInputs()
-        FormatInputsOutputs()
+        FormatInputs()
     End Sub
 
     Private Sub press_Enter(sender As Object, e As KeyPressEventArgs) Handles txtWednesday2.KeyPress, txtWednesday1.KeyPress, txtTuesday2.KeyPress, txtTuesday1.KeyPress, txtThursday2.KeyPress, txtThursday1.KeyPress, txtSunday2.KeyPress, txtSunday1.KeyPress, txtSaturday2.KeyPress, txtSaturday1.KeyPress, txtMonday2.KeyPress, txtMonday1.KeyPress, txtHourlySalary.KeyPress, txtFriday2.KeyPress, txtFriday1.KeyPress, txtEmployeeName.KeyPress
@@ -68,45 +67,26 @@
     End Sub
 
     Private Sub GetInputs()
-        Decimal.TryParse(txtHourlySalary.Text, decRate)
-        Decimal.TryParse(txtMonday1.Text, decMon1)
-        Decimal.TryParse(txtMonday2.Text, decMon2)
-        Decimal.TryParse(txtTuesday1.Text, decTue1)
-        Decimal.TryParse(txtTuesday2.Text, decTue2)
-        Decimal.TryParse(txtWednesday1.Text, decWed1)
-        Decimal.TryParse(txtWednesday2.Text, decWed2)
-        Decimal.TryParse(txtThursday1.Text, decThu1)
-        Decimal.TryParse(txtThursday2.Text, decThu2)
-        Decimal.TryParse(txtFriday1.Text, decFri1)
-        Decimal.TryParse(txtFriday2.Text, decFri2)
-        Decimal.TryParse(txtSaturday1.Text, decSat1)
-        Decimal.TryParse(txtSaturday2.Text, decSat2)
-        Decimal.TryParse(txtSunday1.Text, decSun1)
-        Decimal.TryParse(txtSunday2.Text, decSun2)
-        'Clean Inputs
-        CleanInputs()
+        decRate = Decimal.Parse(txtHourlySalary.Text)
+        decMon1 = RemoveExcessiveHours(Decimal.Parse(txtMonday1.Text))
+        decMon2 = RemoveExcessiveHours(Decimal.Parse(txtMonday2.Text))
+        decTue1 = RemoveExcessiveHours(Decimal.Parse(txtTuesday1.Text))
+        decTue2 = RemoveExcessiveHours(Decimal.Parse(txtTuesday2.Text))
+        decWed1 = RemoveExcessiveHours(Decimal.Parse(txtWednesday1.Text))
+        decWed2 = RemoveExcessiveHours(Decimal.Parse(txtWednesday2.Text))
+        decThu1 = RemoveExcessiveHours(Decimal.Parse(txtThursday1.Text))
+        decThu2 = RemoveExcessiveHours(Decimal.Parse(txtThursday2.Text))
+        decFri1 = RemoveExcessiveHours(Decimal.Parse(txtFriday1.Text))
+        decFri2 = RemoveExcessiveHours(Decimal.Parse(txtFriday2.Text))
+        decSat1 = RemoveExcessiveHours(Decimal.Parse(txtSaturday1.Text))
+        decSat2 = RemoveExcessiveHours(Decimal.Parse(txtSaturday2.Text))
+        decSun1 = RemoveExcessiveHours(Decimal.Parse(txtSunday1.Text))
+        decSun2 = RemoveExcessiveHours(Decimal.Parse(txtSunday2.Text))
     End Sub
 
-    Private Sub CleanInputs()
-        RemoveExcessiveHours(decMon1)
-        RemoveExcessiveHours(decMon2)
-        RemoveExcessiveHours(decTue1)
-        RemoveExcessiveHours(decTue2)
-        RemoveExcessiveHours(decWed1)
-        RemoveExcessiveHours(decWed2)
-        RemoveExcessiveHours(decThu1)
-        RemoveExcessiveHours(decThu2)
-        RemoveExcessiveHours(decFri1)
-        RemoveExcessiveHours(decFri2)
-        RemoveExcessiveHours(decSat1)
-        RemoveExcessiveHours(decSat2)
-        RemoveExcessiveHours(decSun1)
-        RemoveExcessiveHours(decSun2)
-    End Sub
-
-    Private Sub RemoveExcessiveHours(ByRef decHours As Decimal)
-        decHours = If(decHours > 24, 24, decHours)
-    End Sub
+    Private Function RemoveExcessiveHours(decHours As Decimal) As Decimal
+        Return If(decHours > 24, 24, decHours)
+    End Function
 
     Private Sub FormatInputsOutputs()
         FormatInputs()
