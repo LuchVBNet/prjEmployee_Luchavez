@@ -1,0 +1,24 @@
+D:\Visual Studio\prjEmployee_Luchavez\bin\Debug\prjEmployee_Luchavez.exe.config
+D:\Visual Studio\prjEmployee_Luchavez\bin\Debug\prjEmployee_Luchavez.exe
+D:\Visual Studio\prjEmployee_Luchavez\bin\Debug\prjEmployee_Luchavez.pdb
+D:\Visual Studio\prjEmployee_Luchavez\bin\Debug\prjEmployee_Luchavez.xml
+D:\Visual Studio\prjEmployee_Luchavez\obj\Debug\prjEmployee_Luchavez.vbprojAssemblyReference.cache
+D:\Visual Studio\prjEmployee_Luchavez\obj\Debug\prjEmployee_Luchavez.frmMain.resources
+D:\Visual Studio\prjEmployee_Luchavez\obj\Debug\prjEmployee_Luchavez.Resources.resources
+D:\Visual Studio\prjEmployee_Luchavez\obj\Debug\prjEmployee_Luchavez.vbproj.GenerateResource.cache
+D:\Visual Studio\prjEmployee_Luchavez\obj\Debug\prjEmployee_Luchavez.vbproj.CoreCompileInputs.cache
+D:\Visual Studio\prjEmployee_Luchavez\obj\Debug\prjEmployee_Luchavez.exe
+D:\Visual Studio\prjEmployee_Luchavez\obj\Debug\prjEmployee_Luchavez.xml
+D:\Visual Studio\prjEmployee_Luchavez\obj\Debug\prjEmployee_Luchavez.pdb
+D:\Visual Studio\Week 1\prjEmployee_Luchavez\bin\Debug\prjEmployee_Luchavez.exe.config
+D:\Visual Studio\Week 1\prjEmployee_Luchavez\bin\Debug\prjEmployee_Luchavez.exe
+D:\Visual Studio\Week 1\prjEmployee_Luchavez\bin\Debug\prjEmployee_Luchavez.pdb
+D:\Visual Studio\Week 1\prjEmployee_Luchavez\bin\Debug\prjEmployee_Luchavez.xml
+D:\Visual Studio\Week 1\prjEmployee_Luchavez\obj\Debug\prjEmployee_Luchavez.vbprojAssemblyReference.cache
+D:\Visual Studio\Week 1\prjEmployee_Luchavez\obj\Debug\prjEmployee_Luchavez.frmMain.resources
+D:\Visual Studio\Week 1\prjEmployee_Luchavez\obj\Debug\prjEmployee_Luchavez.Resources.resources
+D:\Visual Studio\Week 1\prjEmployee_Luchavez\obj\Debug\prjEmployee_Luchavez.vbproj.GenerateResource.cache
+D:\Visual Studio\Week 1\prjEmployee_Luchavez\obj\Debug\prjEmployee_Luchavez.vbproj.CoreCompileInputs.cache
+D:\Visual Studio\Week 1\prjEmployee_Luchavez\obj\Debug\prjEmployee_Luchavez.exe
+D:\Visual Studio\Week 1\prjEmployee_Luchavez\obj\Debug\prjEmployee_Luchavez.xml
+D:\Visual Studio\Week 1\prjEmployee_Luchavez\obj\Debug\prjEmployee_Luchavez.pdb
