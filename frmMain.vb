@@ -3,12 +3,6 @@
     Private Const decRegHours As Decimal = 8
     Private decMon1, decMon2, decTue1, decTue2, decWed1, decWed2, decThu1, decThu2, decFri1, decFri2, decSat1, decSat2, decSun1, decSun2, decRate, decRegTotal, decRegAmount, decOverTotal, decOverAmount, decNetPay As Decimal
 
-    Private Sub press_Enter(sender As Object, e As KeyPressEventArgs) Handles txtWednesday2.KeyPress, txtWednesday1.KeyPress, txtTuesday2.KeyPress, txtTuesday1.KeyPress, txtThursday2.KeyPress, txtThursday1.KeyPress, txtSunday2.KeyPress, txtSunday1.KeyPress, txtSaturday2.KeyPress, txtSaturday1.KeyPress, txtMonday2.KeyPress, txtMonday1.KeyPress, txtHourlySalary.KeyPress, txtFriday2.KeyPress, txtFriday1.KeyPress, txtEmployeeName.KeyPress
-        If (e.KeyChar = ChrW(Keys.Enter)) Then
-            cmdProcessIt.PerformClick()
-        End If
-    End Sub
-
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         GetInputs()
         FormatInputsOutputs()
@@ -35,9 +29,28 @@
     Private Sub cmdClear_Click(sender As Object, e As EventArgs) Handles cmdClear.Click
         txtEmployeeName.Clear()
         txtEmployeeName.Focus()
-        'set to 0.00
         GetInputs()
         FormatInputsOutputs()
+    End Sub
+
+    Private Sub textbox_TextChanged(sender As Object, e As EventArgs) Handles txtWednesday2.TextChanged, txtWednesday1.TextChanged, txtTuesday2.TextChanged, txtTuesday1.TextChanged, txtThursday2.TextChanged, txtThursday1.TextChanged, txtSunday2.TextChanged, txtSunday1.TextChanged, txtSaturday2.TextChanged, txtSaturday1.TextChanged, txtMonday2.TextChanged, txtMonday1.TextChanged, txtHourlySalary.TextChanged, txtFriday2.TextChanged, txtFriday1.TextChanged
+        decRegTotal = 0
+        decRegAmount = 0
+        decOverTotal = 0
+        decOverAmount = 0
+        decNetPay = 0
+        FormatOutputs()
+    End Sub
+
+    Private Sub textbox_LostFocus(sender As Object, e As EventArgs) Handles txtWednesday2.Leave, txtWednesday1.Leave, txtTuesday2.Leave, txtTuesday1.Leave, txtThursday2.Leave, txtThursday1.Leave, txtSunday2.Leave, txtSunday1.Leave, txtSaturday2.Leave, txtSaturday1.Leave, txtMonday2.Leave, txtMonday1.Leave, txtHourlySalary.Leave, txtFriday2.Leave, txtFriday1.Leave
+        GetInputs()
+        FormatInputsOutputs()
+    End Sub
+
+    Private Sub press_Enter(sender As Object, e As KeyPressEventArgs) Handles txtWednesday2.KeyPress, txtWednesday1.KeyPress, txtTuesday2.KeyPress, txtTuesday1.KeyPress, txtThursday2.KeyPress, txtThursday1.KeyPress, txtSunday2.KeyPress, txtSunday1.KeyPress, txtSaturday2.KeyPress, txtSaturday1.KeyPress, txtMonday2.KeyPress, txtMonday1.KeyPress, txtHourlySalary.KeyPress, txtFriday2.KeyPress, txtFriday1.KeyPress, txtEmployeeName.KeyPress
+        If (e.KeyChar = ChrW(Keys.Enter)) Then
+            cmdProcessIt.PerformClick()
+        End If
     End Sub
 
     Private Sub GetInputs()
@@ -82,7 +95,11 @@
     End Sub
 
     Private Sub FormatInputsOutputs()
-        'Inputs
+        FormatInputs()
+        FormatOutputs()
+    End Sub
+
+    Private Sub FormatInputs()
         txtHourlySalary.Text = decRate.ToString("N2")
         txtMonday1.Text = decMon1.ToString("N2")
         txtMonday2.Text = decMon2.ToString("N2")
@@ -98,7 +115,8 @@
         txtSaturday2.Text = decSat2.ToString("N2")
         txtSunday1.Text = decSun1.ToString("N2")
         txtSunday2.Text = decSun2.ToString("N2")
-        'Outputs
+    End Sub
+    Private Sub FormatOutputs()
         txtRegularHours.Text = decRegTotal.ToString("N2")
         txtRegularAmount.Text = decRegAmount.ToString("N2")
         txtOvertimeHours.Text = decOverTotal.ToString("N2")
