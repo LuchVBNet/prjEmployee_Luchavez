@@ -29,8 +29,22 @@
     Private Sub cmdClear_Click(sender As Object, e As EventArgs) Handles cmdClear.Click
         txtEmployeeName.Clear()
         txtEmployeeName.Focus()
-        GetInputs()
-        FormatInputsOutputs()
+        decRate = 0
+        decMon1 = 0
+        decMon2 = 0
+        decTue1 = 0
+        decTue2 = 0
+        decWed1 = 0
+        decWed2 = 0
+        decThu1 = 0
+        decThu2 = 0
+        decFri1 = 0
+        decFri2 = 0
+        decSat1 = 0
+        decSat2 = 0
+        decSun1 = 0
+        decSun2 = 0
+        FormatInputs()
     End Sub
 
     Private Sub textbox_TextChanged(sender As Object, e As EventArgs) Handles txtWednesday2.TextChanged, txtWednesday1.TextChanged, txtTuesday2.TextChanged, txtTuesday1.TextChanged, txtThursday2.TextChanged, txtThursday1.TextChanged, txtSunday2.TextChanged, txtSunday1.TextChanged, txtSaturday2.TextChanged, txtSaturday1.TextChanged, txtMonday2.TextChanged, txtMonday1.TextChanged, txtHourlySalary.TextChanged, txtFriday2.TextChanged, txtFriday1.TextChanged
