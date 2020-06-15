@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmMain
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmMain
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtHourlySalary = New System.Windows.Forms.TextBox()
@@ -64,11 +64,9 @@ Partial Class frmMain
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.txtOvertimeHours = New System.Windows.Forms.TextBox()
-        Me.FileSystemWatcher1 = New System.IO.FileSystemWatcher()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -355,8 +353,10 @@ Partial Class frmMain
         '
         Me.txtNetPay.Location = New System.Drawing.Point(533, 29)
         Me.txtNetPay.Name = "txtNetPay"
+        Me.txtNetPay.ReadOnly = True
         Me.txtNetPay.Size = New System.Drawing.Size(100, 20)
         Me.txtNetPay.TabIndex = 31
+        Me.txtNetPay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label16
         '
@@ -385,15 +385,17 @@ Partial Class frmMain
         Me.cmdClear.Name = "cmdClear"
         Me.cmdClear.Size = New System.Drawing.Size(121, 50)
         Me.cmdClear.TabIndex = 4
-        Me.cmdClear.Text = "Clear"
+        Me.cmdClear.Text = "&Clear"
         Me.cmdClear.UseVisualStyleBackColor = False
         '
         'txtOvertimeAmount
         '
         Me.txtOvertimeAmount.Location = New System.Drawing.Point(360, 55)
         Me.txtOvertimeAmount.Name = "txtOvertimeAmount"
+        Me.txtOvertimeAmount.ReadOnly = True
         Me.txtOvertimeAmount.Size = New System.Drawing.Size(100, 20)
         Me.txtOvertimeAmount.TabIndex = 29
+        Me.txtOvertimeAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'cmdProcessIt
         '
@@ -404,15 +406,17 @@ Partial Class frmMain
         Me.cmdProcessIt.Name = "cmdProcessIt"
         Me.cmdProcessIt.Size = New System.Drawing.Size(121, 50)
         Me.cmdProcessIt.TabIndex = 3
-        Me.cmdProcessIt.Text = "Process It"
+        Me.cmdProcessIt.Text = "&Process It"
         Me.cmdProcessIt.UseVisualStyleBackColor = False
         '
         'txtRegularAmount
         '
         Me.txtRegularAmount.Location = New System.Drawing.Point(360, 29)
         Me.txtRegularAmount.Name = "txtRegularAmount"
+        Me.txtRegularAmount.ReadOnly = True
         Me.txtRegularAmount.Size = New System.Drawing.Size(100, 20)
         Me.txtRegularAmount.TabIndex = 28
+        Me.txtRegularAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label13
         '
@@ -427,8 +431,10 @@ Partial Class frmMain
         '
         Me.txtRegularHours.Location = New System.Drawing.Point(254, 29)
         Me.txtRegularHours.Name = "txtRegularHours"
+        Me.txtRegularHours.ReadOnly = True
         Me.txtRegularHours.Size = New System.Drawing.Size(100, 20)
         Me.txtRegularHours.TabIndex = 23
+        Me.txtRegularHours.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label14
         '
@@ -452,13 +458,10 @@ Partial Class frmMain
         '
         Me.txtOvertimeHours.Location = New System.Drawing.Point(254, 55)
         Me.txtOvertimeHours.Name = "txtOvertimeHours"
+        Me.txtOvertimeHours.ReadOnly = True
         Me.txtOvertimeHours.Size = New System.Drawing.Size(100, 20)
         Me.txtOvertimeHours.TabIndex = 25
-        '
-        'FileSystemWatcher1
-        '
-        Me.FileSystemWatcher1.EnableRaisingEvents = True
-        Me.FileSystemWatcher1.SynchronizingObject = Me
+        Me.txtOvertimeHours.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'frmMain
         '
@@ -477,7 +480,6 @@ Partial Class frmMain
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -524,5 +526,4 @@ Partial Class frmMain
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents txtOvertimeHours As TextBox
-    Friend WithEvents FileSystemWatcher1 As IO.FileSystemWatcher
 End Class
