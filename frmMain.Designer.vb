@@ -64,6 +64,10 @@ Partial Class frmMain
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.txtOvertimeHours = New System.Windows.Forms.TextBox()
+        Me.txtTax = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.txtGrossPay = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -154,7 +158,7 @@ Partial Class frmMain
         Me.Label11.Location = New System.Drawing.Point(750, 27)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(43, 13)
-        Me.Label11.TabIndex = 22
+        Me.Label11.TabIndex = 6
         Me.Label11.Text = "Sunday"
         '
         'txtSunday2
@@ -162,14 +166,14 @@ Partial Class frmMain
         Me.txtSunday2.Location = New System.Drawing.Point(724, 69)
         Me.txtSunday2.Name = "txtSunday2"
         Me.txtSunday2.Size = New System.Drawing.Size(100, 20)
-        Me.txtSunday2.TabIndex = 21
+        Me.txtSunday2.TabIndex = 22
         '
         'txtSunday1
         '
         Me.txtSunday1.Location = New System.Drawing.Point(724, 43)
         Me.txtSunday1.Name = "txtSunday1"
         Me.txtSunday1.Size = New System.Drawing.Size(100, 20)
-        Me.txtSunday1.TabIndex = 20
+        Me.txtSunday1.TabIndex = 14
         '
         'Label10
         '
@@ -177,7 +181,7 @@ Partial Class frmMain
         Me.Label10.Location = New System.Drawing.Point(643, 27)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(49, 13)
-        Me.Label10.TabIndex = 19
+        Me.Label10.TabIndex = 5
         Me.Label10.Text = "Saturday"
         '
         'txtSaturday2
@@ -185,14 +189,14 @@ Partial Class frmMain
         Me.txtSaturday2.Location = New System.Drawing.Point(618, 69)
         Me.txtSaturday2.Name = "txtSaturday2"
         Me.txtSaturday2.Size = New System.Drawing.Size(100, 20)
-        Me.txtSaturday2.TabIndex = 18
+        Me.txtSaturday2.TabIndex = 21
         '
         'txtSaturday1
         '
         Me.txtSaturday1.Location = New System.Drawing.Point(618, 43)
         Me.txtSaturday1.Name = "txtSaturday1"
         Me.txtSaturday1.Size = New System.Drawing.Size(100, 20)
-        Me.txtSaturday1.TabIndex = 17
+        Me.txtSaturday1.TabIndex = 13
         '
         'Label9
         '
@@ -200,7 +204,7 @@ Partial Class frmMain
         Me.Label9.Location = New System.Drawing.Point(543, 27)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(35, 13)
-        Me.Label9.TabIndex = 16
+        Me.Label9.TabIndex = 4
         Me.Label9.Text = "Friday"
         '
         'txtFriday2
@@ -208,14 +212,14 @@ Partial Class frmMain
         Me.txtFriday2.Location = New System.Drawing.Point(512, 69)
         Me.txtFriday2.Name = "txtFriday2"
         Me.txtFriday2.Size = New System.Drawing.Size(100, 20)
-        Me.txtFriday2.TabIndex = 15
+        Me.txtFriday2.TabIndex = 20
         '
         'txtFriday1
         '
         Me.txtFriday1.Location = New System.Drawing.Point(512, 43)
         Me.txtFriday1.Name = "txtFriday1"
         Me.txtFriday1.Size = New System.Drawing.Size(100, 20)
-        Me.txtFriday1.TabIndex = 14
+        Me.txtFriday1.TabIndex = 12
         '
         'Label8
         '
@@ -223,7 +227,7 @@ Partial Class frmMain
         Me.Label8.Location = New System.Drawing.Point(428, 27)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(51, 13)
-        Me.Label8.TabIndex = 13
+        Me.Label8.TabIndex = 3
         Me.Label8.Text = "Thursday"
         '
         'txtThursday2
@@ -231,7 +235,7 @@ Partial Class frmMain
         Me.txtThursday2.Location = New System.Drawing.Point(406, 69)
         Me.txtThursday2.Name = "txtThursday2"
         Me.txtThursday2.Size = New System.Drawing.Size(100, 20)
-        Me.txtThursday2.TabIndex = 12
+        Me.txtThursday2.TabIndex = 19
         '
         'txtThursday1
         '
@@ -246,7 +250,7 @@ Partial Class frmMain
         Me.Label7.Location = New System.Drawing.Point(318, 27)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(64, 13)
-        Me.Label7.TabIndex = 10
+        Me.Label7.TabIndex = 2
         Me.Label7.Text = "Wednesday"
         '
         'txtWednesday2
@@ -254,14 +258,14 @@ Partial Class frmMain
         Me.txtWednesday2.Location = New System.Drawing.Point(302, 69)
         Me.txtWednesday2.Name = "txtWednesday2"
         Me.txtWednesday2.Size = New System.Drawing.Size(100, 20)
-        Me.txtWednesday2.TabIndex = 9
+        Me.txtWednesday2.TabIndex = 18
         '
         'txtWednesday1
         '
         Me.txtWednesday1.Location = New System.Drawing.Point(302, 43)
         Me.txtWednesday1.Name = "txtWednesday1"
         Me.txtWednesday1.Size = New System.Drawing.Size(100, 20)
-        Me.txtWednesday1.TabIndex = 8
+        Me.txtWednesday1.TabIndex = 10
         '
         'Label6
         '
@@ -269,7 +273,7 @@ Partial Class frmMain
         Me.Label6.Location = New System.Drawing.Point(224, 27)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(48, 13)
-        Me.Label6.TabIndex = 7
+        Me.Label6.TabIndex = 1
         Me.Label6.Text = "Tuesday"
         '
         'txtTuesday2
@@ -277,14 +281,14 @@ Partial Class frmMain
         Me.txtTuesday2.Location = New System.Drawing.Point(196, 69)
         Me.txtTuesday2.Name = "txtTuesday2"
         Me.txtTuesday2.Size = New System.Drawing.Size(100, 20)
-        Me.txtTuesday2.TabIndex = 6
+        Me.txtTuesday2.TabIndex = 17
         '
         'txtTuesday1
         '
         Me.txtTuesday1.Location = New System.Drawing.Point(196, 43)
         Me.txtTuesday1.Name = "txtTuesday1"
         Me.txtTuesday1.Size = New System.Drawing.Size(100, 20)
-        Me.txtTuesday1.TabIndex = 5
+        Me.txtTuesday1.TabIndex = 9
         '
         'Label5
         '
@@ -292,7 +296,7 @@ Partial Class frmMain
         Me.Label5.Location = New System.Drawing.Point(120, 27)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(45, 13)
-        Me.Label5.TabIndex = 4
+        Me.Label5.TabIndex = 0
         Me.Label5.Text = "Monday"
         '
         'Label4
@@ -301,7 +305,7 @@ Partial Class frmMain
         Me.Label4.Location = New System.Drawing.Point(8, 72)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(76, 13)
-        Me.Label4.TabIndex = 3
+        Me.Label4.TabIndex = 15
         Me.Label4.Text = "Second Week"
         '
         'txtMonday2
@@ -309,7 +313,7 @@ Partial Class frmMain
         Me.txtMonday2.Location = New System.Drawing.Point(90, 69)
         Me.txtMonday2.Name = "txtMonday2"
         Me.txtMonday2.Size = New System.Drawing.Size(100, 20)
-        Me.txtMonday2.TabIndex = 2
+        Me.txtMonday2.TabIndex = 16
         '
         'Label3
         '
@@ -317,7 +321,7 @@ Partial Class frmMain
         Me.Label3.Location = New System.Drawing.Point(26, 46)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(58, 13)
-        Me.Label3.TabIndex = 1
+        Me.Label3.TabIndex = 7
         Me.Label3.Text = "First Week"
         '
         'txtMonday1
@@ -325,17 +329,19 @@ Partial Class frmMain
         Me.txtMonday1.Location = New System.Drawing.Point(90, 43)
         Me.txtMonday1.Name = "txtMonday1"
         Me.txtMonday1.Size = New System.Drawing.Size(100, 20)
-        Me.txtMonday1.TabIndex = 0
+        Me.txtMonday1.TabIndex = 8
         '
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.Bisque
+        Me.GroupBox3.Controls.Add(Me.txtGrossPay)
+        Me.GroupBox3.Controls.Add(Me.Label18)
+        Me.GroupBox3.Controls.Add(Me.txtTax)
+        Me.GroupBox3.Controls.Add(Me.Label17)
         Me.GroupBox3.Controls.Add(Me.txtNetPay)
         Me.GroupBox3.Controls.Add(Me.Label16)
         Me.GroupBox3.Controls.Add(Me.Label12)
-        Me.GroupBox3.Controls.Add(Me.cmdClear)
         Me.GroupBox3.Controls.Add(Me.txtOvertimeAmount)
-        Me.GroupBox3.Controls.Add(Me.cmdProcessIt)
         Me.GroupBox3.Controls.Add(Me.txtRegularAmount)
         Me.GroupBox3.Controls.Add(Me.Label13)
         Me.GroupBox3.Controls.Add(Me.txtRegularHours)
@@ -345,35 +351,35 @@ Partial Class frmMain
         Me.GroupBox3.Location = New System.Drawing.Point(12, 192)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(838, 100)
-        Me.GroupBox3.TabIndex = 2
+        Me.GroupBox3.TabIndex = 4
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Payroll Processing"
         '
         'txtNetPay
         '
-        Me.txtNetPay.Location = New System.Drawing.Point(533, 29)
+        Me.txtNetPay.Location = New System.Drawing.Point(724, 29)
         Me.txtNetPay.Name = "txtNetPay"
         Me.txtNetPay.ReadOnly = True
         Me.txtNetPay.Size = New System.Drawing.Size(100, 20)
-        Me.txtNetPay.TabIndex = 31
+        Me.txtNetPay.TabIndex = 13
         Me.txtNetPay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(482, 32)
+        Me.Label16.Location = New System.Drawing.Point(448, 32)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(48, 13)
-        Me.Label16.TabIndex = 32
-        Me.Label16.Text = "Net Pay:"
+        Me.Label16.Size = New System.Drawing.Size(58, 13)
+        Me.Label16.TabIndex = 8
+        Me.Label16.Text = "Gross Pay:"
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(391, 13)
+        Me.Label12.Location = New System.Drawing.Point(333, 13)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(43, 13)
-        Me.Label12.TabIndex = 30
+        Me.Label12.TabIndex = 1
         Me.Label12.Text = "Amount"
         '
         'cmdClear
@@ -381,20 +387,20 @@ Partial Class frmMain
         Me.cmdClear.BackColor = System.Drawing.Color.Red
         Me.cmdClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cmdClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdClear.Location = New System.Drawing.Point(703, 29)
+        Me.cmdClear.Location = New System.Drawing.Point(729, 298)
         Me.cmdClear.Name = "cmdClear"
         Me.cmdClear.Size = New System.Drawing.Size(121, 50)
-        Me.cmdClear.TabIndex = 4
+        Me.cmdClear.TabIndex = 3
         Me.cmdClear.Text = "&Clear"
         Me.cmdClear.UseVisualStyleBackColor = False
         '
         'txtOvertimeAmount
         '
-        Me.txtOvertimeAmount.Location = New System.Drawing.Point(360, 55)
+        Me.txtOvertimeAmount.Location = New System.Drawing.Point(302, 55)
         Me.txtOvertimeAmount.Name = "txtOvertimeAmount"
         Me.txtOvertimeAmount.ReadOnly = True
         Me.txtOvertimeAmount.Size = New System.Drawing.Size(100, 20)
-        Me.txtOvertimeAmount.TabIndex = 29
+        Me.txtOvertimeAmount.TabIndex = 7
         Me.txtOvertimeAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'cmdProcessIt
@@ -402,75 +408,113 @@ Partial Class frmMain
         Me.cmdProcessIt.BackColor = System.Drawing.Color.MediumSeaGreen
         Me.cmdProcessIt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cmdProcessIt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdProcessIt.Location = New System.Drawing.Point(15, 29)
+        Me.cmdProcessIt.Location = New System.Drawing.Point(602, 298)
         Me.cmdProcessIt.Name = "cmdProcessIt"
         Me.cmdProcessIt.Size = New System.Drawing.Size(121, 50)
-        Me.cmdProcessIt.TabIndex = 3
+        Me.cmdProcessIt.TabIndex = 2
         Me.cmdProcessIt.Text = "&Process It"
         Me.cmdProcessIt.UseVisualStyleBackColor = False
         '
         'txtRegularAmount
         '
-        Me.txtRegularAmount.Location = New System.Drawing.Point(360, 29)
+        Me.txtRegularAmount.Location = New System.Drawing.Point(302, 29)
         Me.txtRegularAmount.Name = "txtRegularAmount"
         Me.txtRegularAmount.ReadOnly = True
         Me.txtRegularAmount.Size = New System.Drawing.Size(100, 20)
-        Me.txtRegularAmount.TabIndex = 28
+        Me.txtRegularAmount.TabIndex = 6
         Me.txtRegularAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(285, 13)
+        Me.Label13.Location = New System.Drawing.Point(227, 13)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(35, 13)
-        Me.Label13.TabIndex = 27
+        Me.Label13.TabIndex = 0
         Me.Label13.Text = "Hours"
         '
         'txtRegularHours
         '
-        Me.txtRegularHours.Location = New System.Drawing.Point(254, 29)
+        Me.txtRegularHours.Location = New System.Drawing.Point(196, 29)
         Me.txtRegularHours.Name = "txtRegularHours"
         Me.txtRegularHours.ReadOnly = True
         Me.txtRegularHours.Size = New System.Drawing.Size(100, 20)
-        Me.txtRegularHours.TabIndex = 23
+        Me.txtRegularHours.TabIndex = 3
         Me.txtRegularHours.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(196, 58)
+        Me.Label14.Location = New System.Drawing.Point(138, 58)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(52, 13)
-        Me.Label14.TabIndex = 26
+        Me.Label14.TabIndex = 4
         Me.Label14.Text = "Overtime:"
         '
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(201, 32)
+        Me.Label15.Location = New System.Drawing.Point(143, 32)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(47, 13)
-        Me.Label15.TabIndex = 24
+        Me.Label15.TabIndex = 2
         Me.Label15.Text = "Regular:"
         '
         'txtOvertimeHours
         '
-        Me.txtOvertimeHours.Location = New System.Drawing.Point(254, 55)
+        Me.txtOvertimeHours.Location = New System.Drawing.Point(196, 55)
         Me.txtOvertimeHours.Name = "txtOvertimeHours"
         Me.txtOvertimeHours.ReadOnly = True
         Me.txtOvertimeHours.Size = New System.Drawing.Size(100, 20)
-        Me.txtOvertimeHours.TabIndex = 25
+        Me.txtOvertimeHours.TabIndex = 5
         Me.txtOvertimeHours.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'txtTax
+        '
+        Me.txtTax.Location = New System.Drawing.Point(512, 58)
+        Me.txtTax.Name = "txtTax"
+        Me.txtTax.ReadOnly = True
+        Me.txtTax.Size = New System.Drawing.Size(100, 20)
+        Me.txtTax.TabIndex = 11
+        Me.txtTax.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(419, 61)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(87, 13)
+        Me.Label17.TabIndex = 10
+        Me.Label17.Text = "Withholding Tax:"
+        '
+        'txtGrossPay
+        '
+        Me.txtGrossPay.Location = New System.Drawing.Point(512, 29)
+        Me.txtGrossPay.Name = "txtGrossPay"
+        Me.txtGrossPay.ReadOnly = True
+        Me.txtGrossPay.Size = New System.Drawing.Size(100, 20)
+        Me.txtGrossPay.TabIndex = 9
+        Me.txtGrossPay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(673, 32)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(48, 13)
+        Me.Label18.TabIndex = 12
+        Me.Label18.Text = "Net Pay:"
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(862, 304)
+        Me.ClientSize = New System.Drawing.Size(862, 357)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.cmdClear)
+        Me.Controls.Add(Me.cmdProcessIt)
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Georgetown Cleaning Services - Employee System"
@@ -526,4 +570,8 @@ Partial Class frmMain
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents txtOvertimeHours As TextBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents txtTax As TextBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents txtGrossPay As TextBox
 End Class

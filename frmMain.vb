@@ -1,7 +1,7 @@
 ﻿Public Class frmMain
     'class-level declarations
     Private Const decRegHours As Decimal = 8
-    Private decMon1, decMon2, decTue1, decTue2, decWed1, decWed2, decThu1, decThu2, decFri1, decFri2, decSat1, decSat2, decSun1, decSun2, decRate, decRegTotal, decRegAmount, decOverTotal, decOverAmount, decNetPay As Decimal
+    Private decMon1, decMon2, decTue1, decTue2, decWed1, decWed2, decThu1, decThu2, decFri1, decFri2, decSat1, decSat2, decSun1, decSun2, decRate, decRegTotal, decRegAmount, decOverTotal, decOverAmount, decGrossPay, decTax, decNetPay As Decimal
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FormatInputsOutputs()
@@ -9,18 +9,29 @@
 
     Private Sub cmdProcessIt_Click(sender As Object, e As EventArgs) Handles cmdProcessIt.Click
         'procedure-level declarations
-        Dim decRegOverTotal, decRestTotal As Decimal
+        Dim decRegOverTotal, decRestTotal, decRestOverTotal As Decimal
         'get data from form
         GetInputs()
         'computations for hours
         decRegTotal = GetRegHours(decMon1) + GetRegHours(decMon2) + GetRegHours(decTue1) + GetRegHours(decTue2) + GetRegHours(decWed1) + GetRegHours(decWed2) + GetRegHours(decThu1) + GetRegHours(decThu2) + GetRegHours(decFri1) + GetRegHours(decFri2)
         decRegOverTotal = GetOverHours(decMon1) + GetOverHours(decMon2) + GetOverHours(decTue1) + GetOverHours(decTue2) + GetOverHours(decWed1) + GetOverHours(decWed2) + GetOverHours(decThu1) + GetOverHours(decThu2) + GetOverHours(decFri1) + GetOverHours(decFri2)
         decRestTotal = GetRegHours(decSat1) + GetRegHours(decSat2) + GetRegHours(decSun1) + GetRegHours(decSun2)
-        decOverTotal = decRegOverTotal + decRestTotal
+        decRestOverTotal = GetOverHours(decSat1) + GetOverHours(decSat2) + GetOverHours(decSun1) + GetOverHours(decSun2)
+        decOverTotal = decRegOverTotal + decRestTotal + decRestOverTotal
         'computations for amounts
         decRegAmount = decRegTotal * decRate
-        decOverAmount = (decRestTotal * 1.3D + decRegOverTotal * 1.25D) * decRate
-        decNetPay = decRegAmount + decOverAmount
+        decOverAmount = (decRegOverTotal * 1.5D + decRestTotal * 1.25D + decRestOverTotal * 1.3D) * decRate
+        decGrossPay = decRegAmount + decOverAmount
+        If Not decGrossPay > 10416.66 Then
+            decTax = 0
+        ElseIf decGrossPay > 10416.66 AndAlso Not decGrossPay > 16666.66 Then
+            decTax = (decGrossPay - 10416.66D) * 0.2D
+        ElseIf decGrossPay > 16666.66 AndAlso Not decGrossPay > 33333.33 Then
+            decTax = 1250 + (decGrossPay - 16666.66D) * 0.25D
+        Else
+            decTax = 5416.66D + (decGrossPay - 33333.33D) * 0.3D
+        End If
+        decNetPay = decGrossPay - decTax
         'display
         FormatInputsOutputs()
     End Sub
@@ -51,6 +62,8 @@
         decRegAmount = 0
         decOverTotal = 0
         decOverAmount = 0
+        decGrossPay = 0
+        decTax = 0
         decNetPay = 0
         FormatOutputs()
     End Sub
@@ -115,6 +128,8 @@
         txtRegularAmount.Text = decRegAmount.ToString("N2")
         txtOvertimeHours.Text = decOverTotal.ToString("N2")
         txtOvertimeAmount.Text = decOverAmount.ToString("N2")
+        txtGrossPay.Text = decGrossPay.ToString("N2")
+        txtTax.Text = decTax.ToString("N2")
         txtNetPay.Text = decNetPay.ToString("N2")
     End Sub
 
