@@ -1,10 +1,21 @@
 ﻿Public Class frmMain
     'class-level declarations
     Private Const decRegHours As Decimal = 8
-    Private decMon1, decMon2, decTue1, decTue2, decWed1, decWed2, decThu1, decThu2, decFri1, decFri2, decSat1, decSat2, decSun1, decSun2, decRate, decRegTotal, decRegAmount, decOverTotal, decOverAmount, decGrossPay, decTax, decNetPay As Decimal
+    Private decMon1, decMon2, decTue1, decTue2, decWed1, decWed2, decThu1, decThu2, decFri1, decFri2, decSat1, decSat2, decSun1, decSun2, decRate, decRegTotal, decRegAmount, decOverTotal, decOverAmount, decGrossPay, decTax, decPAGIBIG, decSSS, decSSSEmployee, decNetPay As Decimal
+
+    Private Sub cmbEmployeeName_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbEmployeeName.SelectedIndexChanged
+        txtHourlySalary.Text = decEmployeeHourRate(cmbEmployeeName.SelectedIndex).ToString("N2")
+    End Sub
+
+    Private strEmployeeName() As String = {"Kallum Spooner", "Aadil Macleod", "Natasha Elliot", "Keiron Skinner", "Gruffydd Holt", "Ivy-Rose Bowler", "Charlotte Coulson", "Maximillian Brady", "Chantal Castro", "Daniele Lawrence"}
+    Private decEmployeeHourRate() As Decimal = {600, 130, 75, 125, 60, 115.75D, 88.25D, 45.25D, 128.65D, 175.45D}
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FormatInputsOutputs()
+        For Each strName As String In strEmployeeName
+            cmbEmployeeName.Items.Add(strName)
+        Next
+        cmbEmployeeName.SelectedIndex = 0
     End Sub
 
     Private Sub cmdProcessIt_Click(sender As Object, e As EventArgs) Handles cmdProcessIt.Click
@@ -22,6 +33,33 @@
         decRegAmount = decRegTotal * decRate
         decOverAmount = (decRegOverTotal * 1.5D + decRestTotal * 1.25D + decRestOverTotal * 1.3D) * decRate
         decGrossPay = decRegAmount + decOverAmount
+        ComputeWithholdingTax()
+        decPAGIBIG = ComputePAGIBIGFund(decGrossPay)
+        ComputeSSS(decGrossPay, decSSS, decSSSEmployee)
+        decNetPay = decGrossPay - decTax - decPAGIBIG - decSSSEmployee
+        'display
+        FormatInputsOutputs()
+    End Sub
+
+    Private Sub ComputeSSS(decGrossPay As Decimal, ByRef decSSS As Decimal, ByRef decSSSEmployee As Decimal)
+        decSSS = decGrossPay * 0.1215D
+        If decSSS > 2400 Then
+            decSSS = 2400
+        End If
+        decSSSEmployee = decSSS * (4 / 12.15D)
+    End Sub
+
+    Private Function ComputePAGIBIGFund(decGrossPay As Decimal) As Decimal
+        If decGrossPay < 1000 Then
+            Return 0
+        ElseIf decGrossPay <= 1500 Then
+            Return decGrossPay * 0.01D
+        Else
+            Return decGrossPay * 0.02D
+        End If
+    End Function
+
+    Private Sub ComputeWithholdingTax()
         If Not decGrossPay > 10416.66 Then
             decTax = 0
         ElseIf decGrossPay > 10416.66 AndAlso Not decGrossPay > 16666.66 Then
@@ -31,14 +69,10 @@
         Else
             decTax = 5416.66D + (decGrossPay - 33333.33D) * 0.3D
         End If
-        decNetPay = decGrossPay - decTax
-        'display
-        FormatInputsOutputs()
     End Sub
 
     Private Sub cmdClear_Click(sender As Object, e As EventArgs) Handles cmdClear.Click
-        txtEmployeeName.Clear()
-        txtEmployeeName.Focus()
+        cmbEmployeeName.SelectedIndex = 0
         decRate = 0
         decMon1 = 0
         decMon2 = 0
@@ -64,6 +98,9 @@
         decOverAmount = 0
         decGrossPay = 0
         decTax = 0
+        decPAGIBIG = 0
+        decSSS = 0
+        decSSSEmployee = 0
         decNetPay = 0
         FormatOutputs()
     End Sub
@@ -73,7 +110,7 @@
         FormatInputs()
     End Sub
 
-    Private Sub press_Enter(sender As Object, e As KeyPressEventArgs) Handles txtWednesday2.KeyPress, txtWednesday1.KeyPress, txtTuesday2.KeyPress, txtTuesday1.KeyPress, txtThursday2.KeyPress, txtThursday1.KeyPress, txtSunday2.KeyPress, txtSunday1.KeyPress, txtSaturday2.KeyPress, txtSaturday1.KeyPress, txtMonday2.KeyPress, txtMonday1.KeyPress, txtHourlySalary.KeyPress, txtFriday2.KeyPress, txtFriday1.KeyPress, txtEmployeeName.KeyPress
+    Private Sub press_Enter(sender As Object, e As KeyPressEventArgs) Handles txtWednesday2.KeyPress, txtWednesday1.KeyPress, txtTuesday2.KeyPress, txtTuesday1.KeyPress, txtThursday2.KeyPress, txtThursday1.KeyPress, txtSunday2.KeyPress, txtSunday1.KeyPress, txtSaturday2.KeyPress, txtSaturday1.KeyPress, txtMonday2.KeyPress, txtMonday1.KeyPress, txtHourlySalary.KeyPress, txtFriday2.KeyPress, txtFriday1.KeyPress
         If (e.KeyChar = ChrW(Keys.Enter)) Then
             cmdProcessIt.PerformClick()
         End If
@@ -130,6 +167,9 @@
         txtOvertimeAmount.Text = decOverAmount.ToString("N2")
         txtGrossPay.Text = decGrossPay.ToString("N2")
         txtTax.Text = decTax.ToString("N2")
+        txtPAGIBIG.Text = decPAGIBIG.ToString("N2")
+        txtSSS.Text = decSSS.ToString("N2")
+        txtSSSEmployee.Text = decSSSEmployee.ToString("N2")
         txtNetPay.Text = decNetPay.ToString("N2")
     End Sub
 

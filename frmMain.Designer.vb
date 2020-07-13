@@ -23,9 +23,9 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cmbEmployeeName = New System.Windows.Forms.ComboBox()
         Me.txtHourlySalary = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtEmployeeName = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -52,22 +52,30 @@ Partial Class frmMain
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtMonday1 = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.txtSSSEmployee = New System.Windows.Forms.TextBox()
+        Me.txtSSS = New System.Windows.Forms.TextBox()
+        Me.lblSSS = New System.Windows.Forms.Label()
+        Me.txtPAGIBIG = New System.Windows.Forms.TextBox()
+        Me.lblPAGIBIG = New System.Windows.Forms.Label()
+        Me.txtGrossPay = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.txtTax = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.txtNetPay = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.cmdClear = New System.Windows.Forms.Button()
         Me.txtOvertimeAmount = New System.Windows.Forms.TextBox()
-        Me.cmdProcessIt = New System.Windows.Forms.Button()
         Me.txtRegularAmount = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.txtRegularHours = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.txtOvertimeHours = New System.Windows.Forms.TextBox()
-        Me.txtTax = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.txtGrossPay = New System.Windows.Forms.TextBox()
-        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.cmdClear = New System.Windows.Forms.Button()
+        Me.cmdProcessIt = New System.Windows.Forms.Button()
+        Me.Label21 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -76,9 +84,9 @@ Partial Class frmMain
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Bisque
+        Me.GroupBox1.Controls.Add(Me.cmbEmployeeName)
         Me.GroupBox1.Controls.Add(Me.txtHourlySalary)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.txtEmployeeName)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
@@ -87,10 +95,19 @@ Partial Class frmMain
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Employee Identification"
         '
+        'cmbEmployeeName
+        '
+        Me.cmbEmployeeName.FormattingEnabled = True
+        Me.cmbEmployeeName.Location = New System.Drawing.Point(99, 22)
+        Me.cmbEmployeeName.Name = "cmbEmployeeName"
+        Me.cmbEmployeeName.Size = New System.Drawing.Size(303, 21)
+        Me.cmbEmployeeName.TabIndex = 4
+        '
         'txtHourlySalary
         '
         Me.txtHourlySalary.Location = New System.Drawing.Point(724, 19)
         Me.txtHourlySalary.Name = "txtHourlySalary"
+        Me.txtHourlySalary.ReadOnly = True
         Me.txtHourlySalary.Size = New System.Drawing.Size(100, 20)
         Me.txtHourlySalary.TabIndex = 3
         '
@@ -102,13 +119,6 @@ Partial Class frmMain
         Me.Label2.Size = New System.Drawing.Size(66, 13)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Hourly Rate:"
-        '
-        'txtEmployeeName
-        '
-        Me.txtEmployeeName.Location = New System.Drawing.Point(99, 22)
-        Me.txtEmployeeName.Name = "txtEmployeeName"
-        Me.txtEmployeeName.Size = New System.Drawing.Size(303, 20)
-        Me.txtEmployeeName.TabIndex = 1
         '
         'Label1
         '
@@ -334,6 +344,12 @@ Partial Class frmMain
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.Bisque
+        Me.GroupBox3.Controls.Add(Me.Label19)
+        Me.GroupBox3.Controls.Add(Me.txtSSSEmployee)
+        Me.GroupBox3.Controls.Add(Me.txtSSS)
+        Me.GroupBox3.Controls.Add(Me.lblSSS)
+        Me.GroupBox3.Controls.Add(Me.txtPAGIBIG)
+        Me.GroupBox3.Controls.Add(Me.lblPAGIBIG)
         Me.GroupBox3.Controls.Add(Me.txtGrossPay)
         Me.GroupBox3.Controls.Add(Me.Label18)
         Me.GroupBox3.Controls.Add(Me.txtTax)
@@ -355,9 +371,100 @@ Partial Class frmMain
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Payroll Processing"
         '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(666, 43)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(62, 13)
+        Me.Label19.TabIndex = 18
+        Me.Label19.Text = "**SSS (4%):"
+        '
+        'txtSSSEmployee
+        '
+        Me.txtSSSEmployee.Location = New System.Drawing.Point(732, 40)
+        Me.txtSSSEmployee.Name = "txtSSSEmployee"
+        Me.txtSSSEmployee.ReadOnly = True
+        Me.txtSSSEmployee.Size = New System.Drawing.Size(100, 20)
+        Me.txtSSSEmployee.TabIndex = 19
+        Me.txtSSSEmployee.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'txtSSS
+        '
+        Me.txtSSS.Location = New System.Drawing.Point(560, 66)
+        Me.txtSSS.Name = "txtSSS"
+        Me.txtSSS.ReadOnly = True
+        Me.txtSSS.Size = New System.Drawing.Size(100, 20)
+        Me.txtSSS.TabIndex = 17
+        Me.txtSSS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'lblSSS
+        '
+        Me.lblSSS.AutoSize = True
+        Me.lblSSS.Location = New System.Drawing.Point(475, 69)
+        Me.lblSSS.Name = "lblSSS"
+        Me.lblSSS.Size = New System.Drawing.Size(79, 13)
+        Me.lblSSS.TabIndex = 16
+        Me.lblSSS.Text = "*SSS (12.15%):"
+        '
+        'txtPAGIBIG
+        '
+        Me.txtPAGIBIG.Location = New System.Drawing.Point(560, 40)
+        Me.txtPAGIBIG.Name = "txtPAGIBIG"
+        Me.txtPAGIBIG.ReadOnly = True
+        Me.txtPAGIBIG.Size = New System.Drawing.Size(100, 20)
+        Me.txtPAGIBIG.TabIndex = 15
+        Me.txtPAGIBIG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'lblPAGIBIG
+        '
+        Me.lblPAGIBIG.AutoSize = True
+        Me.lblPAGIBIG.Location = New System.Drawing.Point(498, 43)
+        Me.lblPAGIBIG.Name = "lblPAGIBIG"
+        Me.lblPAGIBIG.Size = New System.Drawing.Size(56, 13)
+        Me.lblPAGIBIG.TabIndex = 14
+        Me.lblPAGIBIG.Text = "PAG-IBIG:"
+        '
+        'txtGrossPay
+        '
+        Me.txtGrossPay.Location = New System.Drawing.Point(369, 40)
+        Me.txtGrossPay.Name = "txtGrossPay"
+        Me.txtGrossPay.ReadOnly = True
+        Me.txtGrossPay.Size = New System.Drawing.Size(100, 20)
+        Me.txtGrossPay.TabIndex = 9
+        Me.txtGrossPay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(678, 69)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(48, 13)
+        Me.Label18.TabIndex = 12
+        Me.Label18.Text = "Net Pay:"
+        '
+        'txtTax
+        '
+        Me.txtTax.Location = New System.Drawing.Point(369, 66)
+        Me.txtTax.Name = "txtTax"
+        Me.txtTax.ReadOnly = True
+        Me.txtTax.Size = New System.Drawing.Size(100, 20)
+        Me.txtTax.TabIndex = 11
+        Me.txtTax.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(276, 69)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(87, 13)
+        Me.Label17.TabIndex = 10
+        Me.Label17.Text = "Withholding Tax:"
+        '
         'txtNetPay
         '
-        Me.txtNetPay.Location = New System.Drawing.Point(724, 29)
+        Me.txtNetPay.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNetPay.Location = New System.Drawing.Point(732, 66)
         Me.txtNetPay.Name = "txtNetPay"
         Me.txtNetPay.ReadOnly = True
         Me.txtNetPay.Size = New System.Drawing.Size(100, 20)
@@ -367,7 +474,7 @@ Partial Class frmMain
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(448, 32)
+        Me.Label16.Location = New System.Drawing.Point(305, 43)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(58, 13)
         Me.Label16.TabIndex = 8
@@ -376,11 +483,84 @@ Partial Class frmMain
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(333, 13)
+        Me.Label12.Location = New System.Drawing.Point(193, 24)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(43, 13)
         Me.Label12.TabIndex = 1
         Me.Label12.Text = "Amount"
+        '
+        'txtOvertimeAmount
+        '
+        Me.txtOvertimeAmount.Location = New System.Drawing.Point(170, 66)
+        Me.txtOvertimeAmount.Name = "txtOvertimeAmount"
+        Me.txtOvertimeAmount.ReadOnly = True
+        Me.txtOvertimeAmount.Size = New System.Drawing.Size(100, 20)
+        Me.txtOvertimeAmount.TabIndex = 7
+        Me.txtOvertimeAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'txtRegularAmount
+        '
+        Me.txtRegularAmount.Location = New System.Drawing.Point(170, 40)
+        Me.txtRegularAmount.Name = "txtRegularAmount"
+        Me.txtRegularAmount.ReadOnly = True
+        Me.txtRegularAmount.Size = New System.Drawing.Size(100, 20)
+        Me.txtRegularAmount.TabIndex = 6
+        Me.txtRegularAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(96, 24)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(35, 13)
+        Me.Label13.TabIndex = 0
+        Me.Label13.Text = "Hours"
+        '
+        'txtRegularHours
+        '
+        Me.txtRegularHours.Location = New System.Drawing.Point(64, 40)
+        Me.txtRegularHours.Name = "txtRegularHours"
+        Me.txtRegularHours.ReadOnly = True
+        Me.txtRegularHours.Size = New System.Drawing.Size(100, 20)
+        Me.txtRegularHours.TabIndex = 3
+        Me.txtRegularHours.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(6, 69)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(52, 13)
+        Me.Label14.TabIndex = 4
+        Me.Label14.Text = "Overtime:"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(11, 43)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(47, 13)
+        Me.Label15.TabIndex = 2
+        Me.Label15.Text = "Regular:"
+        '
+        'txtOvertimeHours
+        '
+        Me.txtOvertimeHours.Location = New System.Drawing.Point(64, 66)
+        Me.txtOvertimeHours.Name = "txtOvertimeHours"
+        Me.txtOvertimeHours.ReadOnly = True
+        Me.txtOvertimeHours.Size = New System.Drawing.Size(100, 20)
+        Me.txtOvertimeHours.TabIndex = 5
+        Me.txtOvertimeHours.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(15, 317)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(528, 13)
+        Me.Label20.TabIndex = 19
+        Me.Label20.Text = "**Only 4% from 12.15% SSS Contribution will be deducted from gross pay. Remaining" &
+    " shall be paid by employer."
         '
         'cmdClear
         '
@@ -394,15 +574,6 @@ Partial Class frmMain
         Me.cmdClear.Text = "&Clear"
         Me.cmdClear.UseVisualStyleBackColor = False
         '
-        'txtOvertimeAmount
-        '
-        Me.txtOvertimeAmount.Location = New System.Drawing.Point(302, 55)
-        Me.txtOvertimeAmount.Name = "txtOvertimeAmount"
-        Me.txtOvertimeAmount.ReadOnly = True
-        Me.txtOvertimeAmount.Size = New System.Drawing.Size(100, 20)
-        Me.txtOvertimeAmount.TabIndex = 7
-        Me.txtOvertimeAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
         'cmdProcessIt
         '
         Me.cmdProcessIt.BackColor = System.Drawing.Color.MediumSeaGreen
@@ -415,101 +586,22 @@ Partial Class frmMain
         Me.cmdProcessIt.Text = "&Process It"
         Me.cmdProcessIt.UseVisualStyleBackColor = False
         '
-        'txtRegularAmount
+        'Label21
         '
-        Me.txtRegularAmount.Location = New System.Drawing.Point(302, 29)
-        Me.txtRegularAmount.Name = "txtRegularAmount"
-        Me.txtRegularAmount.ReadOnly = True
-        Me.txtRegularAmount.Size = New System.Drawing.Size(100, 20)
-        Me.txtRegularAmount.TabIndex = 6
-        Me.txtRegularAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(227, 13)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(35, 13)
-        Me.Label13.TabIndex = 0
-        Me.Label13.Text = "Hours"
-        '
-        'txtRegularHours
-        '
-        Me.txtRegularHours.Location = New System.Drawing.Point(196, 29)
-        Me.txtRegularHours.Name = "txtRegularHours"
-        Me.txtRegularHours.ReadOnly = True
-        Me.txtRegularHours.Size = New System.Drawing.Size(100, 20)
-        Me.txtRegularHours.TabIndex = 3
-        Me.txtRegularHours.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(138, 58)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(52, 13)
-        Me.Label14.TabIndex = 4
-        Me.Label14.Text = "Overtime:"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(143, 32)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(47, 13)
-        Me.Label15.TabIndex = 2
-        Me.Label15.Text = "Regular:"
-        '
-        'txtOvertimeHours
-        '
-        Me.txtOvertimeHours.Location = New System.Drawing.Point(196, 55)
-        Me.txtOvertimeHours.Name = "txtOvertimeHours"
-        Me.txtOvertimeHours.ReadOnly = True
-        Me.txtOvertimeHours.Size = New System.Drawing.Size(100, 20)
-        Me.txtOvertimeHours.TabIndex = 5
-        Me.txtOvertimeHours.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'txtTax
-        '
-        Me.txtTax.Location = New System.Drawing.Point(512, 58)
-        Me.txtTax.Name = "txtTax"
-        Me.txtTax.ReadOnly = True
-        Me.txtTax.Size = New System.Drawing.Size(100, 20)
-        Me.txtTax.TabIndex = 11
-        Me.txtTax.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(419, 61)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(87, 13)
-        Me.Label17.TabIndex = 10
-        Me.Label17.Text = "Withholding Tax:"
-        '
-        'txtGrossPay
-        '
-        Me.txtGrossPay.Location = New System.Drawing.Point(512, 29)
-        Me.txtGrossPay.Name = "txtGrossPay"
-        Me.txtGrossPay.ReadOnly = True
-        Me.txtGrossPay.Size = New System.Drawing.Size(100, 20)
-        Me.txtGrossPay.TabIndex = 9
-        Me.txtGrossPay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(673, 32)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(48, 13)
-        Me.Label18.TabIndex = 12
-        Me.Label18.Text = "Net Pay:"
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(15, 298)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(341, 13)
+        Me.Label21.TabIndex = 20
+        Me.Label21.Text = "*If SSS Contribution exceeds 2,400.00, only 2,400.00 shall be required."
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(862, 357)
+        Me.Controls.Add(Me.Label21)
+        Me.Controls.Add(Me.Label20)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -525,6 +617,7 @@ Partial Class frmMain
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -532,7 +625,6 @@ Partial Class frmMain
     Friend WithEvents Label1 As Label
     Friend WithEvents txtHourlySalary As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtEmployeeName As TextBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Label11 As Label
     Friend WithEvents txtSunday2 As TextBox
@@ -574,4 +666,13 @@ Partial Class frmMain
     Friend WithEvents txtTax As TextBox
     Friend WithEvents Label17 As Label
     Friend WithEvents txtGrossPay As TextBox
+    Friend WithEvents cmbEmployeeName As ComboBox
+    Friend WithEvents txtSSS As TextBox
+    Friend WithEvents lblSSS As Label
+    Friend WithEvents txtPAGIBIG As TextBox
+    Friend WithEvents lblPAGIBIG As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents txtSSSEmployee As TextBox
 End Class
